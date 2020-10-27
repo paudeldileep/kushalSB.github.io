@@ -1,0 +1,147 @@
+*{
+	padding:0px;
+	margin:0px;
+}
+a{
+	text-decoration: none;
+}
+
+#top_head{
+	margin-top:7px;
+	margin-left: 7px;
+	border-bottom-style: groove;
+	border-bottom-color: green;
+	border-bottom-width:7px;
+	border-radius: 18px; 
+	position: sticky;
+}
+
+#left_list{
+	position: fixed;
+	width:20%;
+	/*
+	background: rgba(120,256,120,1);
+	*/
+}
+.left_aside_item{
+	vertical-align: middle;
+	margin-bottom: 20%;
+	padding-bottom: 10%;
+}
+#ul_list{
+		height:70%;
+		
+		
+		width:20%;
+		border-right-style: groove;
+		border-color: #44ff33;
+		border-radius: 13px;
+		margin-left: 0%;
+
+		margin-top: 100px;
+		margin-bottom: 100px;
+		position: relative;
+
+		padding-left: 10%;
+		padding-bottom: 100px;
+
+		list-style-type: none;
+		
+		font-size: 0px;
+		padding: 20px;
+		text-align: left;
+		transition: width 1s,font-size 1s;
+
+
+}
+#ul_list:hover{
+	width: 100%;
+	font-size: 100%;
+	height:70%;
+}
+#ul_list li img{
+	margin-left: 3px;
+	margin-top:3px;
+}
+#ul_list li{
+	color:orange;
+	text-shadow: 3px 3px 3px gold;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-bottom-style: groove;
+	border-color: #40ff30;
+	border-radius: 10px;
+	border-width: 0px;
+	transition: border-width .1s;
+}
+#ul_list li:hover{
+	border-width: 1px;
+	background-color: rgba(220,111,50,1);
+	color:white;
+}
+
+#right_aside{
+	position: fixed;
+	right: 0;
+	top:50%;
+	width:4%;
+	height:20%;
+	
+
+}
+#right_aside ul{
+	list-style-type: none;
+	padding-left: 5px;
+	padding-right:5px;
+}
+#right_aside ul li{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#Central_body{
+
+
+}
+table{
+	margin:4px;
+	background: green;
+	position: fixed;
+	left:26%;
+	top:40%;
+	height:40%;
+	width:65%;
+	
+	
+	
+}
+.Calc_creen{
+	border-width: 2px;
+	border-color: grey;
+	border-style: groove;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-left: 5px;
+}
+.Screen_th{
+	background: black;
+	color: white;
+	height:40px;
+}
+th.buttons{
+	border-radius: 8px;
+	height:70px;
+	width:70px;
+	transition: background 1s,color 1s;
+}
+th.buttons:focus{
+	background:white;
+	color:black;
+}
+button{
+	width:100%;
+	height:100%;
+	border-radius: 8px;
+	background:grey;
+	color: white;
+	font-size: 22px;
+}

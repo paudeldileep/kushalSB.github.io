@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+	<!- This will be main css file which will define most of my basic styles -->
+	<link rel="stylesheet" href="main_css.css">
+
+	<!-- This will be my main js file for basic event handling-->
+<script type="text/javascript">
+	var first,second,third,fourth;
+	first=0;
+	second=0; 
+	third=0;
+	fourth=0;
+	function input_value(a,b=0){
+		x=Number(a);
+		if (x==14){
+				document.getElementById("Screen_th").innerHTML="";
+				first=0;
+				second=0;
+				third=0;
+				fourth=0;
+				return 1;
+			}
+		if (second==0){
+			if (x==10){
+				second=10;
+				}
+			else if (x==11){
+				second=11;
+				}
+			else if (x==12){
+				second=12;
+			}
+			else if (x==13){
+				second=13;
+				}
+		}
+		else if(fourth ==0){
+			if (x==10){
+				fourth=10;
+				}
+			else if (x==11){
+				fourth=11;
+				}
+			else if (x==12){
+				fourth=12;
+			}
+			else if (x==13){
+				fourth=13;
+				}
+		}
+
+		if(second==0 && fourth == 0 && x != 15){
+			first=(first*10)+x;
+		}
+		else if ((third == 0 || fourth == 0) && b==0 && x!=15){
+			third=(third * 10) +x;
+		
+		}
+		else if(fourth != 0 || x ==15){
+			if (second==10){
+				add(first,third);
+			}
+			else if (second==11){
+				mult(first,third);
+			}
+			else if (second==12){
+				sub(first,third);
+			}
+			else if (second==13){
+				div(first,third);
+			}
+
+			second=fourth;
+			third=0;
+			fourth=0;
+		}
+
+		if (x==10){
+			document.getElementById("Screen_th").innerHTML+= " + ";
+		}
+		else if(x==11){
+			document.getElementById("Screen_th").innerHTML+=" * ";
+		}
+		else if(x==12){
+			document.getElementById("Screen_th").innerHTML+=" - ";
+		}
+		else if(x==13){
+			document.getElementById("Screen_th").innerHTML+=" / ";
+		}
+		else if(x==15){
+			calc();
+		}
+		else{
+			document.getElementById("Screen_th").innerHTML+=x;
+		}	
+
+}
+function calc(){
+
+}	
+function add(a,b){
+	sol=a+b;
+	
+	document.getElementById("Screen_th").innerHTML = sol;
+	first=sol;
+}
+function mult(a,b){
+	sol=a*b;
+	document.getElementById("Screen_th").innerHTML = sol;
+	first=sol;
+}
+function sub(a,b){
+	sol=a-b;
+	document.getElementById("Screen_th").innerHTML = sol;
+	first=sol;
+}
+function div(a,b){
+	sol=a/b;
+	document.getElementById("Screen_th").innerHTML = sol;
+	first=sol;
+}
+
+</script>
+
+</head>
+<body>
+<header id ="top_head">
+	<!-- Pixals taken are for my personal laptop-->
+	<img src="photos/rhino.jpg" style="width:20%;height:193px;" alt="Rhino_Pic" > <!-- width 16.46%-- , 221px  ,,,16.10 % -- 216.06px-->
+
+	<img src="photos/for_name_4.png" style="width:60.00%;height:193px;" alt="Rhino_Pic" ><!-- width 67.064 % , 900px)-->
+	
+	<!--<img src="photos/rhino.jpg" style="width:16.10%;height:193px;" alt="Rhino_Pic" -->
+	 <!-- Remaing is 16.46 % at 221px--> 
+	
+
+</header>
+<div id="main_body_outer">
+	<aside id="left_list">
+		<ul id="ul_list" >
+			<a href="sign_up.html" >
+			<li>
+				<img src="photos/lion_2.png" width=50px height=50px alt="rocket"> 
+				<span class="left_aside_item">Join my Kingdom!!</span>
+			</li>
+				</a>
+				<a href="log_in.html">
+			<li>
+				<img src="photos/tiger_2.png" width=50px height=50px alt="drop_in"> 
+				<span class="left_aside_item">Already a Member, Hop on :)</span>
+			</li>
+		</a>
+		<a href="poems">
+			<li>
+				<img src="photos/snake_2.png" width=50px height=50px alt="rhino"> 
+				<span class="left_aside_item">Know more About me??</span>
+			</li>
+		</a>
+		</ul>
+	</aside>
+	<section id="Central_body">
+		<section id="Calc_body">
+			<table><tbody>
+				<tr id="Screen" class="calc_screen">
+					<th colspan="5" class="Screen_th" id="Screen_th"></th>
+				</tr>
+				<tr>
+					<th class="buttons">
+						<button id ="buttons" onclick="input_value(1)">
+						1
+					</button>
+					</th>
+					<th class="buttons" onclick="input_value(2)">
+						<button id="buttons">2</button>
+						
+					</th>
+					<th class="buttons">
+						<button id ="buttons" onclick="input_value(3)">3</button>
+					</th>
+					<th class="buttons">
+						<button id ="buttons" onclick="input_value(0)">0</button>
+					</th>
+					<th class="buttons">
+						<button id ="equal_to" onclick="input_value(14,1)">ACE</button>
+					</th>
+
+					
+				</tr>
+				<tr>
+					<th class="buttons">
+						<button id ="buttons" onclick="input_value(4)">4</button>
+					</th>
+					<th class="buttons">
+						<button id ="buttons" onclick="input_value(5)">5</button>
+					</th>
+					<th class="buttons" onclick="input_value(6)">
+						<button id ="buttons">6</button>
+					</th>
+					<th class="buttons">
+						<button id ="adds"onclick="input_value(10,1)" >+</button>
+					</th>
+					<th class="buttons">
+						<button id ="mult" onclick="input_value(11,1)">*</button>
+					</th>
+				</tr>
+				<tr>
+					<th class="buttons">
+						<button id ="buttons" onclick="input_value(7)">7</button>
+					</th>
+					<th class="buttons">
+						<button id ="buttons" onclick="input_value(8)">8</button>
+					</th>
+					<th class="buttons">
+						<button id ="buttons" onclick="input_value(9)">9</button>
+					</th>
+					<th class="buttons">
+						<button id ="sub" onclick="input_value(12,1)">-</button>
+					</th>
+					<th class="buttons">
+						<button id ="divide" onclick="input_value(13,1)">/</button>
+					</th>
+				</tr>
+				<tr>
+					<th colspan="4" class="inv">If you dont give value it will take in zero</th><th class="button"><button id ="equals_to" onclick="input_value(15,1)">=</button></th>
+				</tr>
+			</tbody>
+			</table>
+
+		</section>
+
+		<footer>
+			
+		</footer>
+
+
+	</section>
+	<aside id="right_aside">
+		<ul class="ul_list">
+			<a href="https://www.instagram.com/kushal.bastakoti/?r=nametag"><li class="a">
+				<img src="photos/instagram.png" alt="insta" width="40px" height="40px">
+			</li>
+		</a>
+			<a href="https://discord.gg/67wanAG">
+			<li class="c">
+			
+				<img src="photos/discord.png" alt="insta" width="40px" height="40px">
+			</li>
+		</a>
+		</ul>
+	</aside>
+</div>
+
+
+
+
+</body>
+</html>
